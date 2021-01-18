@@ -96,6 +96,14 @@ def vent4():
         dead()
 
 def tunnel2():
+    print("тут нет монтеров. пошли через кпп")
+    print("\t(1)да    (2)нет")
+
+    answer = input("> ")
+    if answer == "да":
+        dead()
+    else:
+        dead()
 
 def vent2():
     print("Лезем в эту шахту?")
@@ -116,3 +124,20 @@ def vent1():
         tunnel2()
     elif answer == "нет":
         dead()
+
+def start():
+    print("Какую шахту выберешь?")
+    print("\n1\t2\t3\t4")
+    
+    answer = input("> ")
+    if answer == "1":
+        vent1()
+    elif answer == "2":
+        vent2()
+    elif answer == "3":
+        vent3()
+    elif answer == "4":
+        vent4()
+    else:
+        print("Тебя бабушки прогнали")
+start()
