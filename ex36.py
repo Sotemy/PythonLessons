@@ -25,17 +25,21 @@
 # 
 import time
 from sys import exit
+from playsound import playsound
 
 def dead():
     print("Тебя поймали монтеры.")
+    playsound('dead.mp3')
     exit(0)
 
 def bunker():
     print("Тут Котофей, биг бро. Да вообще все")
+    playsound('win.mp3')
     exit(0)
 
 def luk():
     print("Полезем в люк?")
+    playsound('win.mp3')
     print("\n(1)Да\t(2)Нет")
     luk_open = False
     while True:
@@ -59,6 +63,7 @@ def luk():
 
 def tunnel1():
     print("Ты в тоннеле. монтер в другом конце тоннеля. Побежать к люку?")
+    playsound('monter.mp3')
     print("\n(1)Да\t(2)Нет")
 
     answer = input("> ")
@@ -91,6 +96,7 @@ def vent4():
 
     if answer == "да":
         print("Ты в тоннеле, но тут монтер")
+        playsound('dead.mp3')
         dead()
     elif answer == "нет":
         dead()
@@ -111,6 +117,7 @@ def vent2():
 
     if answer == "да":
         print("Ты в тоннеле, но тут монтер")
+        playsound('dead.mp3')
         dead()
     elif answer == "нет":
         dead()
@@ -123,6 +130,7 @@ def vent1():
         print("Ты в тоннеле")
         tunnel2()
     elif answer == "нет":
+        playsound('dead.mp3')
         dead()
 
 def start():
@@ -139,5 +147,6 @@ def start():
     elif answer == "4":
         vent4()
     else:
+        playsound('monter.mp3')
         print("Тебя бабушки прогнали")
 start()
