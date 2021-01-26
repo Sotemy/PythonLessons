@@ -51,5 +51,11 @@ for state, abbrev in list(states.items()):
 
 print('-' * 10)
 # безопасное получение аббревиатуры страны, которая не представлена
-state = states.get('usa')
+state = states.get('США')
 
+if not state:
+    print("Извините, но США нету")
+
+# получение города со значением по умолчанию
+city = cities.get('US', 'не существет')
+print(f"В стране 'US' есть город {city}")
