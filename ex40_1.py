@@ -3,21 +3,8 @@ class Song(object):
         self.animals_song = animals_song
     
     def sing(self):
-        for line in self.animals_song:
-            print(line)
-            koko = """
-
-            ╔╗─╔╗╔══╗╔═══╗╔═══╗╔══╗
-            ║╚═╝║╚╗╔╝║╔══╝║╔══╝║╔╗║
-            ║╔╗─║─║║─║║╔═╗║║╔═╗║╚╝║
-            ║║╚╗║─║║─║║╚╗║║║╚╗║║╔╗║
-            ║║─║║╔╝╚╗║╚═╝║║╚═╝║║║║║
-            ╚╝─╚╝╚══╝╚═══╝╚═══╝╚╝╚╝
-
-            """
-            print(koko)
-
-
+        for lines in self.animals_song:
+            print(lines)
 
 cats_song = Song([
     "МЯУ МЯУ МЯУ МЯУ МЯУ МЯУ МЯУ ",
@@ -33,3 +20,14 @@ dogs_song = Song([
 ])
 cats_song.sing()
 dogs_song.sing()
+
+class Cat(object):
+    def __init__(self):
+        self.name = "Alisa"
+        self.color = "brown"
+        self.years = "2"
+        print(f"Я кошка {self.name}. мне {self.years} года и я {self.color} цвета")
+
+cat = Cat()
+print(f"Я кошка {cat.name}. мне {cat.years} года и я {cat.color} цвета")
+
