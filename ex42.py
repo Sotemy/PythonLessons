@@ -37,11 +37,14 @@ class Employee(Person):
 class Fish(object):
     pass
 
+
 class Salmon(Fish):
-    pass
+    def jumpfromwater():
+        print("Salmon have jumped from water")
 
 class Halibut(Fish):
-    pass
+    def hideinsand():
+        print("Halibut in sand")
 
 barbos = Dog("Barbos")
 
@@ -53,3 +56,5 @@ mary.pet = barsik
 
 print(barbos.name)
 barbos.jump()
+Salmon.jumpfromwater()
+Halibut.hideinsand()
