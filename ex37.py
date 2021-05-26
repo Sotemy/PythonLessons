@@ -45,11 +45,6 @@ def restore():
         print("Ban!!!")
         ban()
 
-# def register():
-# print("Введите свой id telegram:")
-# answer = input("> ")
-
-
 def ban():
     exit(0)
 
@@ -93,15 +88,15 @@ def clone():
 
 def choice():
     print("Выберите программу:")
-    print("sorter\texit\tclone")
+    print("""(S)orter     (E)xit    (C)lone""")
 
     answer = input("> ")
-    if answer == "sorter":
+    if answer.lower() == "s":
         sorter()
-    elif answer == "exit":
+    elif answer.lower() == "e":
         print("\nВы вышли\n")
         exit(0)
-    elif answer == "clone":
+    elif answer.lower() == "c":
         clone()
 enter()
 
