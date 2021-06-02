@@ -1,13 +1,13 @@
 import telebot, sqlite3
 
-bot = telebot.TeleBot("1234647714:AAEb63ROfKfO1iRn0kIVUfmmtGUZOkzvT_I")
+bot = telebot.TeleBot("")
 admin = "747449797"
 
 class Page(object):
     def __init__(self, id, balance):
         self.id = id
         self.balance = balance
-        
+
     
     def choicebtn():
         print("Stuff")
