@@ -13,4 +13,4 @@ def test_index():
     data = {'name': 'Михаил', 'greet': 'Привет, '}
     rv = web.post ('/hello', follow_redirects=True, data=data)
     assert_in(b'mihail', rv.data)
-    assert_in(b'Privet, ', rv.data)a
+    assert_in(b'Privet, ', rv.data)
